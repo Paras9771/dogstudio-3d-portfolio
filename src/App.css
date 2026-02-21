@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  background-color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+  position: relative;
+}
+
+section {
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+
+#section-1 nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+  padding-top: 3.5rem;
+}
+
+#section-1 nav .nav-elem {
+  color: white;
+}
+
+#section-1 nav .nav-elem:nth-child(2) {
+  i{
+    color:red
+  }
+}
+#section-1 nav svg {
+  max-width: 6rem;
+  width: 100%;
+  height: 100%;
+}
+
+#section-1 .middle {
+  display: flex;
+}
+
+#section-1 .middle .left, .right {
+  width: 50%;
+}
+
+#section-1 .middle .left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  padding-block: 5rem;
+}
+
+#section-1 .middle .left h1 {
+  font-size: 5rem;
+  line-height: 0.8;
+  text-align: right;
+}
+
+#section-1 .bottom {
+  display: flex;
+  color: white;
+  gap: 3rem;
+}
+#section-1 .bottom .left, .right {
+width: 50%;
+}
+
+#section-1 .bottom .right p {
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.first-line {
+  width: 35rem;
+  background-color: rgba(255, 0, 0, 0.396);
+  height: 1px;
+  position: absolute;
+  transform: rotate(45deg) translate(0, -17rem);
+}
+
+.Second-line {
+  width: 10rem;
+  background-color: rgba(255, 0, 0, 0.396);
+  height: 1px;
+  position: absolute;
+  transform: rotate(135deg);
+  top: 28%;
+  right: 12%;
+}
+
+#Canvas-elem::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image:url(/background-m.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.3s linear;
+}
+#section-2{
+  min-height:100vh;
+  background: transparent;
+  padding:6vw 8vw;
+  font-family: "Inter", sans-serif;
+  color:white;
+  margin-left: 2.5rem;
+}
+
+#section-2 .titles{
+  display:flex;
+  flex-direction:column;
+  gap:3vw;
+}
+
+#section-2 .item{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  cursor:pointer;
+  opacity: 0.5;
+}
+
+#section-2 .item small{
+  display:block;
+  font-size:0.8vw;
+  letter-spacing:2px;
+  color:#777;
+  margin-bottom:0.6vw;
+  width: 180px;      
+  flex-shrink: 0;
+}
+
+#section-2 .item h1{
+  font-size:4vw;
+  font-weight: 100;
+  color:rgba(255,255,255,0.25);
+  transition:all 0.4s ease;
+}
+
+#section-2 .item:hover h1,
+#section-2 .item:hover small{
+  opacity: 1;
+  color:#fff;
+  transform:translateX(25px);
+}
+
+@media(max-width:768px){
+  #section-2 .item small{
+    font-size:12px;
+  }
+
+  #section-2 .item h1{
+    font-size:32px;
+  }
+}
+
+main:has(#section-2 .item:hover) #Canvas-elem::after{
+  opacity: 0;
+}
+
+.images {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.images img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+
+main:has(#section-2 .item[img-title="tomorrowland"]:hover) .images #tomorrowland{
+  opacity:1;
+  background-color: rgb(4, 7, 24);
+}
+
+/* Navy Pier */
+main:has(#section-2 .item[img-title="Navy-pier"]:hover) .images #Navy-pier{
+  opacity:1;
+  background-color: rgb(4, 7, 24);
+}
+
+/* MSI Chicago */
+main:has(#section-2 .item[img-title="MRICisago"]:hover) .images #MRICisago{
+  opacity:1;
+  background-color: rgb(4, 7, 24);
+}
+
+/* Lourise */
+main:has(#section-2 .item[img-title="Lourise"]:hover) .images #Lourise{
+  opacity:1;
+  background-color: rgb(4, 7, 24);
+}
+
+/* KIKK Festival */
+main:has(#section-2 .item[img-title="KIKKFestival"]:hover) .images #KIKKFestival{
+  opacity:1;
+  background-color: rgba(1, 15, 92, 0.679)
+}
+
+/* Kennedy Center */
+main:has(#section-2 .item[img-title="KinnedyCenter"]:hover) .images #KinnedyCenter{
+  opacity:1;
+  background-color: rgb(4, 7, 24);
+}
+
+/* Royal Opera */
+main:has(#section-2 .item[img-title="RoyalOperar"]:hover) .images #RoyalOpera{
+  opacity:1;
+  background-color: rgb(176, 4, 4);
+}
+
+#section-3 {
+  padding-block: 10rem;
+  padding-inline: 10rem;
+  color: white;
+  position: relative;
+  z-index: 0;
+}
+
+#section-3 .top, .bottom {
+  display: flex;
+  width: 100%;
+  gap: 10rem;
+}
+
+
+#section-3 .left, .right {
+  width: 50%;
+
+}
+
+#section-3 .top, .left {
+  padding-left: 5rem;
+  
+}
+
+#section-3 .top, .left h3 {
+  font-size: 3rem;
+  font-weight: 200;
+  opacity: 0.7;
+}
+
+#section-3 .top .left h3 span {
+  color: red;
+}
+
+#section-3 .bottom, .right {
+  display: flex;
+  gap: 5rem;
+}
+
+#section-3 .bottom, .right p {
+  opacity: 0.7;
+  font-weight: 200;
+  font-size: 1rem;
+  
+}
