@@ -278,3 +278,119 @@ main:has(#section-2 .item[img-title="RoyalOperar"]:hover) .images #RoyalOpera{
   font-size: 1rem;
   
 }
+
+/* ================= SECTION 4 ================= */
+
+/* ================= PREMIUM SECTION 4 ================= */
+
+#section-4 {
+  min-height: 70vh;
+  background: radial-gradient(circle at top, rgba(255,45,45,0.08), transparent 40%);
+  color: white;
+  padding: 7rem 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Soft top separator */
+#section-4::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+  display: block;
+  margin-bottom: 4rem;
+}
+
+/* Layout */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+/* Left Side */
+.footer-left h2 {
+  font-size: 3.4rem;
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(90deg, #ffffff, #ff2d2d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-left p {
+  font-weight: 300;
+  opacity: 0.75;
+  max-width: 420px;
+  line-height: 1.7;
+}
+
+/* Right Links */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.footer-right a {
+  position: relative;
+  width: fit-content;
+  text-decoration: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+/* Animated underline */
+.footer-right a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 1px;
+  background: #ff2d2d;
+  transition: width 0.4s ease;
+}
+
+.footer-right a:hover::after {
+  width: 100%;
+}
+
+.footer-right a:hover {
+  color: #ff2d2d;
+}
+
+/* Bottom */
+.footer-bottom {
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #section-4 {
+    padding: 5rem 6vw;
+  }
+
+  .footer-left h2 {
+    font-size: 2.4rem;
+  }
+
+  .footer-container {
+    gap: 3rem;
+  }
+}

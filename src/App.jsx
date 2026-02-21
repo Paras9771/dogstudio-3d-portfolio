@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <main>
-        <div className="images"> 
+        <div className="images">
           <img id='tomorrowland' src="\tommorowland.png" alt="" />
           <img id='Navy-pier' src="\Navy-pier.png" alt="" />
           <img id='MRICisago' src="\MRI Cisago.png" alt="" />
@@ -16,17 +16,17 @@ function App() {
           <img id='KinnedyCenter' src="\KinnedyCenter.png" alt="" />
           <img id='RoyalOpera' src="\RoyalOpera.png" alt="" />
         </div>
-        <Canvas 
-        id='Canvas-elem'
-        style={{
-          height: "100vh",
-          width: "100vw",
-          position: "fixed",
-          top: 0,
-          left: 0,
-          zIndex: 1,
-        }
-        }>
+        <Canvas
+          id='Canvas-elem'
+          style={{
+            height: "100vh",
+            width: "100vw",
+            position: "fixed",
+            top: 0,
+            left: 0,
+            zIndex: 1,
+          }
+          }>
           <Dog />
         </Canvas>
         <section id='section-1'>
@@ -82,37 +82,37 @@ function App() {
         <section id="section-2">
           <div className="titles">
 
-            <div img-title = "tomorrowland" className="item">
+            <div img-title="tomorrowland" className="item">
               <small>2028 — ONGOING</small>
               <h1>Tomorrowland</h1>
             </div>
 
-            <div img-title = "Navy-pier" className="item">
+            <div img-title="Navy-pier" className="item">
               <small>2026 — TODAY</small>
               <h1>Navy Pier</h1>
             </div>
 
-            <div img-title = "MRICisago" className="item">
+            <div img-title="MRICisago" className="item">
               <small>2020 — TODAY</small>
               <h1>MSI Chicago</h1>
             </div>
 
-            <div img-title = "Lourise" className="item">
+            <div img-title="Lourise" className="item">
               <small>2018</small>
               <h1>This Was Louise's Phone</h1>
             </div>
 
-            <div img-title = "KIKKFestival" className="item">
+            <div img-title="KIKKFestival" className="item">
               <small>2016 — TODAY</small>
               <h1>KIKK Festival 2016</h1>
             </div>
 
-            <div img-title = "KinnedyCenter" className="item">
+            <div img-title="KinnedyCenter" className="item">
               <small>2015</small>
               <h1>The Kennedy Center</h1>
             </div>
 
-            <div img-title = "RoyalOperar" className="item">
+            <div img-title="RoyalOperar" className="item">
               <small>2013 — ONGOING</small>
               <h1>Royal Opera Of Wallonia</h1>
             </div>
@@ -122,26 +122,55 @@ function App() {
         <section id='section-3'>
           <div className='top'>
             <div className='left'>
-              <h3>We're craflting <br></br> 
-              emotional <br></br> 
-              experiences aimed <br></br> at improving result<br></br> 
-              <span>Made by Paras</span></h3>
+              <h3>We're craflting <br></br>
+                emotional <br></br>
+                experiences aimed <br></br> at improving result<br></br>
+                <span>Made by Paras</span></h3>
             </div>
             <div className='right'></div>
           </div>
           <div className='bottom'>
             <div className='left'></div>
             <div className='right'>
-              <p>Dogstudio is a design & <br></br> technology firm working globally <br></br> 
-              from our offices based in <br></br> Belgium and Chicago. <br></br>
-              Our strong focus on producing <br></br> high quality & emotional <br></br> 
-              brandings, digital products and <br></br> experiences became a signature.</p>
+              <p>Dogstudio is a design & <br></br> technology firm working globally <br></br>
+                from our offices based in <br></br> Belgium and Chicago. <br></br>
+                Our strong focus on producing <br></br> high quality & emotional <br></br>
+                brandings, digital products and <br></br> experiences became a signature.</p>
 
-              <p>We’re passionate about moving <br></br> people and solving problems for <br></br> 
-              the likes of Microsoft, The <br></br> Museum of Science And Industry <br></br> 
-              Of Chicago, The Kennedy Center <br></br> of Washington, Dragone, Quanta <br></br> 
-              Magazine, and many more.</p>
+              <p>We’re passionate about moving <br></br> people and solving problems for <br></br>
+                the likes of Microsoft, The <br></br> Museum of Science And Industry <br></br>
+                Of Chicago, The Kennedy Center <br></br> of Washington, Dragone, Quanta <br></br>
+                Magazine, and many more.</p>
             </div>
+          </div>
+        </section>
+        <section id="section-4">
+          <div className="footer-container">
+
+            <div className="footer-left">
+              <h2>Let's Build Something Great</h2>
+              <p>
+                Creative Developer focused on immersive 3D web experiences
+                using React & Three.js.
+              </p>
+            </div>
+
+            <div className="footer-right">
+              <a href="https://github.com/Paras9771" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/parastomar123/" target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+              <a href="mailto:parastomar851@gmail.com">
+                Email
+              </a>
+            </div>
+
+          </div>
+
+          <div className="footer-bottom">
+            <span>© 2026 Paras Tomar</span>
           </div>
         </section>
       </main>

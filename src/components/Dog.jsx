@@ -110,54 +110,53 @@ const Dog = () => {
         endTrigger: "#section-3",
         start: "top top",
         end: "bottom bottom",
-        markers: true,
         scrub: true
       }
     })
     tl
-    .to(dogModel.current.scene.position, {
-                z: "-=0.75",
-                y: "+=0.1"
-            })
-            .to(dogModel.current.scene.rotation, {
-                x: `+=${Math.PI / 15}`
-            })
-            .to(dogModel.current.scene.rotation, {
-                y: `-=${Math.PI}`,
+      .to(dogModel.current.scene.position, {
+        z: "-=0.75",
+        y: "+=0.1"
+      })
+      .to(dogModel.current.scene.rotation, {
+        x: `+=${Math.PI / 15}`
+      })
+      .to(dogModel.current.scene.rotation, {
+        y: `-=${Math.PI}`,
 
-            }, "third")
-            .to(dogModel.current.scene.position, {
-                x: "-=0.5",
-                z: "+=0.6",
-                y: "-=0.05"
-            }, "third")
+      }, "third")
+      .to(dogModel.current.scene.position, {
+        x: "-=0.5",
+        z: "+=0.6",
+        y: "-=0.05"
+      }, "third")
   }, [])
 
   useEffect(() => {
 
-  const el = document.querySelector(
-    `.titles .item[img-title="tomorrowland"]`
-  );
+    const el = document.querySelector(
+      `.titles .item[img-title="tomorrowland"]`
+    );
 
-  if (!el) return;
+    if (!el) return;
 
-  const handleEnter = () => {
-    gsap.to(material.current.uProgress, {
-      value: 0.0,
-      duration: 3,
-      onUpdate: () => {
-    dogMaterial.needsUpdate = true
-  }
-    });
-  };
+    const handleEnter = () => {
+      gsap.to(material.current.uProgress, {
+        value: 0.0,
+        duration: 3,
+        onUpdate: () => {
+          dogMaterial.needsUpdate = true
+        }
+      });
+    };
 
-  el.addEventListener("mouseenter", handleEnter);
+    el.addEventListener("mouseenter", handleEnter);
 
-  return () => {
-    el.removeEventListener("mouseenter", handleEnter);
-  };
+    return () => {
+      el.removeEventListener("mouseenter", handleEnter);
+    };
 
-}, []);
+  }, []);
 
   return (
     <>
